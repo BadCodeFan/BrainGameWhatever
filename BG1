@@ -1,0 +1,9 @@
+def getcommondel(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+result = getcommondel(num1, num2)
+print(f"Наименьший общий делитель {num1} и {num2} равен {result}.")

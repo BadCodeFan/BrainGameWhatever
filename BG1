@@ -1,9 +1,28 @@
-def getcommondel(a, b):
-    while b:
-        a, b = b, a % b
-    return a
+import random
+def lcm(a, b):
+    m = a * b
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+    return m // (a + b)
 
-num1 = int(input("Введите первое число: "))
-num2 = int(input("Введите второе число: "))
-result = getcommondel(num1, num2)
-print(f"Наименьший общий делитель {num1} и {num2} равен {result}.")
+x = int(input('первое число = '))
+y = int(input('второе число = '))
+
+r=lcm(x, y)
+r1=random.randint(1, 100)
+r2=random.randint(50, 500)
+
+answers=[r, r1, r2]
+random.shuffle(answers)
+print ("какой из вариантов верный?")
+print (answers)
+
+player=int(input())
+
+if player!=r:
+    print ("Worng, you idiot!")
+else:
+    print ("Correct, you magnificent bastard!")

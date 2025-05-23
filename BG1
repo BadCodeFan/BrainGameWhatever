@@ -24,5 +24,6 @@ player=int(input())
 
 if player!=r:
     print ("Worng, you idiot!")
+    print("You shoud've said", r)
 else:
     print ("Correct, you magnificent bastard!")

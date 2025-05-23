@@ -1,4 +1,6 @@
+pip install ruff
 import random
+
 def lcm(a, b):
     m = a * b
     while a != 0 and b != 0:

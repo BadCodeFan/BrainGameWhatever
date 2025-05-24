@@ -1,4 +1,3 @@
-pip install ruff
 import random
 
 def lcm(a, b):

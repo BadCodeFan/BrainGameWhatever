@@ -1,0 +1,13 @@
+import subprocess
+
+def main():
+    choice = input(" '1' для первой игры или '2' дл второй: ")
+    if choice == '1':
+        subprocess.run(['python', 'BG1.py'])  # Adjust the command if necessary
+    elif choice == '2':
+        subprocess.run(['python', 'BG2.py'])  # Adjust the command if necessary
+    else:
+        print("Непрральна")
+
+if __name__ == "__main__":
+    main()

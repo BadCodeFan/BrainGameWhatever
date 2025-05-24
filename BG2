@@ -1,22 +1,28 @@
 import random
+import sys
 
-a1=random.randint(1, 10)
-ran=random.randint(1, 9)
+
+r1=random.randint(1, 10)
+r2=random.randint(1, 9)
 length="qwertyuiop"
 lis=[]
 
 for i in length:
-  lis.append(a1)
-  a1=a1**2
+  lis.append(r1)
+  r1=r1**2
 
-answer=lis[ran]
-lis[ran]=".."
+answer=lis[r2]
+lis[r2]=".."
 
 print(lis)
 print("What's the missing number, eh?")
 player=int(input())
-if player!=answer:
+
+if player != answer:
   print("No, you bumbling fool!")
   print("The right answer was:", answer)
+  sys.exit(1)
 else:
   print("Oh wow, you got that right!")
+  sys.exit(0)
+

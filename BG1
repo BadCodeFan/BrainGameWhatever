@@ -1,4 +1,5 @@
 import random
+import sys
 
 def lcm(a, b):
     m = a * b
@@ -9,22 +10,26 @@ def lcm(a, b):
             b %= a
     return m // (a + b)
 
-x = int(input('первое число = '))
-y = int(input('второе число = '))
 
+x = float(sys.argv[1])
+y = float(sys.argv[1])
+    
 r=lcm(x, y)
 r1=random.randint(1, 100)
 r2=random.randint(50, 500)
 
-answers=[r, r1, r2]
-random.shuffle(answers)
+answer=[r, r1, r2]
+random.shuffle(answer)
+print(answer)
+
 print ("какой из вариантов верный?")
-print (answers)
 
 player=int(input())
 
-if player!=r:
+if player!=answer:
     print ("Worng, you idiot!")
     print("You shoud've said", r)
+    sys.exit(1)
 else:
     print ("Correct, you magnificent bastard!")
+    sys.exit(0)
